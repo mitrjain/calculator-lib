@@ -6,4 +6,9 @@ fi
 
 mkdir build
 cd build
+
+echo "Generating build instructions..."
 cmake ..
+
+echo "Building.."
+make
