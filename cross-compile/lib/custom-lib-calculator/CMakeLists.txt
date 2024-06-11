@@ -8,4 +8,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 add_library(CustomLib1Calculator src/calculator.cpp)
 
 # Specify include directories if needed
-target_include_directories(CustomLib1Calculator PRIVATE include)
+target_include_directories(CustomLib1Calculator PUBLIC include)
