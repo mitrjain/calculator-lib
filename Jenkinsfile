@@ -1,7 +1,7 @@
 pipeline {
     agent {
         dockerfile {
-            dir 'cross-compile'
+            dir 'calculator-lib/cross-compile'
         }
     }
     stages {
