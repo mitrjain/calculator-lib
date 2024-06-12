@@ -1,13 +1,10 @@
 pipeline {
-    agent {
-        dockerfile {
-            dir 'calculator-lib/cross-compile'
-        }
-    }
+    agent any
     stages {
         stage('init') {
             steps{
                 sh 'echo Hello'
+                sh 'pwd'
             }
 
         }
