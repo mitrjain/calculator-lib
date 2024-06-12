@@ -1,11 +1,11 @@
-pipeline{
-    agent{
-        dockerfile{
+pipeline {
+    agent {
+        dockerfile {
             dir 'cross-compile/'
         }
     }
-    stages{
-        stage('init'){
+    stages {
+        stage('init') {
             steps{
                 sh 'echo Hello'
             }
