@@ -1,7 +1,7 @@
 pipeline {
     agent {
         dockerfile {
-            dir 'cross-compile/'
+            dir 'cross-compile'
         }
     }
     stages {
