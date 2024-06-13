@@ -12,3 +12,5 @@ cmake ..
 
 echo "Building.."
 make
+
+ls -al
