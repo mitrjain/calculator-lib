@@ -5,11 +5,11 @@ pipeline {
     stages {
         stage('build') {
             steps{
-                sh 'pwd'
-                sh 'cd ./cross-compile'
-                sh 'ls -al'
-                sh 'chmod 777 build.sh'
-                sh './build.sh'
+                dir('cross-compile') {
+                    sh 'ls -al'
+                    sh 'chmod 777 build.sh'
+                    sh './build.sh'
+                }
             }
         }
 
