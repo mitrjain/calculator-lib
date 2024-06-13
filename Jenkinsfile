@@ -15,6 +15,7 @@ pipeline {
 
         stage('test') {
             steps{
+                sh 'pwd'
                 sh './cross-compile/tests/test_Calculator'
             }
         }
