@@ -1,17 +1,28 @@
 pipeline {
     agent {
-        dockerfile {
-            dir 'cross-compile'
-        }
+        docker { image 'mitrjain1996/calculator-env:latest' }
     }
     stages {
-        stage('init') {
+        stage('build') {
             steps{
-                sh 'echo Hello'
-                sh 'pwd'
-                sh 'ls'
+                sh 'cd cross-compile'
+                sh 'mkdir build'
+                sh 'cd build'
+                sh 'cmake ..'
+                sh 'make'
             }
+        }
 
+        stage('test') {
+            steps{
+                sh './cross-compile/tests/test_Calculate'
+            }
+        }
+
+        stage('publish') {
+            steps{
+                sh 'echo "Publish artificats."'
+            }
         }
     }
 }
