@@ -15,7 +15,7 @@ pipeline {
 
         stage('test') {
             steps{
-                sh './cross-compile/tests/test_Calculate'
+                sh './cross-compile/tests/test_Calculator'
             }
         }
 
