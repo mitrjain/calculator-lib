@@ -16,7 +16,11 @@ pipeline {
         stage('test') {
             steps{
                 sh 'pwd'
-                sh './cross-compile/tests/test_Calculator'
+                dir('cross-compile/tests/') {
+                    sh 'ls -al'
+                    sh './test_Calculator'
+                }
+                
             }
         }
 
