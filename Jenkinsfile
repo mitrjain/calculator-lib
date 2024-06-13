@@ -7,11 +7,9 @@ pipeline {
             steps{
                 sh 'pwd'
                 sh 'cd cross-compile'
-                sh 'mkdir build'
-                sh 'cd build'
-                sh 'pwd'
-                sh 'cmake ..'
-                sh 'make'
+                sh 'ls -al'
+                sh 'chmod 777 build.sh'
+                sh './build.sh'
             }
         }
 
