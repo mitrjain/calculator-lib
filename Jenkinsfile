@@ -5,9 +5,11 @@ pipeline {
     stages {
         stage('build') {
             steps{
+                sh 'pwd'
                 sh 'cd cross-compile'
                 sh 'mkdir build'
                 sh 'cd build'
+                sh 'pwd'
                 sh 'cmake ..'
                 sh 'make'
             }
